@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { CustomerLoginComponent } from './customer-login/customer-login';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CustomerLoginComponent, FormsModule],
+  // מחקנו את CustomerLoginComponent והוספנו את RouterLink
+  imports: [RouterOutlet, RouterLink, FormsModule], 
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

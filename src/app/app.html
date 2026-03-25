@@ -1,14 +1,12 @@
 <nav class="navbar">
   <div class="navbar-logo">Easy CARS</div>
   <ul class="navbar-links">
-    <li><a href="#">בית</a></li>
-    <li><a href="#">אודות</a></li>
-    <li><a href="#">צור קשר</a></li>
+    <li><a routerLink="/cars">מאגר רכבים</a></li>
+    <li><a routerLink="/login">התחברות</a></li>
+    <li><a routerLink="/register">הרשמה חדשה</a></li>
   </ul>
 </nav>
 
-<main>
-  <!-- כאן יוצג התוכן של הדף -->
+<main style="padding: 20px;">
   <router-outlet></router-outlet>
-  <app-customer-login></app-customer-login>
 </main>

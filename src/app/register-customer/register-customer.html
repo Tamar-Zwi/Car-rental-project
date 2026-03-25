@@ -1,0 +1,34 @@
+<div class="register-container" style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+  <h2>הרשמת לקוח חדש</h2>
+  
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    
+    <label>תעודת זהות / מספר לקוח:</label>
+    <input type="number" [(ngModel)]="newCustomer.Id" placeholder="הכנס תעודת זהות" class="login-input">
+
+    <label>שם פרטי:</label>
+    <input type="text" [(ngModel)]="newCustomer.firstName" placeholder="הכנס שם פרטי" class="login-input">
+
+    <label>שם משפחה:</label>
+    <input type="text" [(ngModel)]="newCustomer.lastName" placeholder="הכנס שם משפחה" class="login-input">
+
+    <label>אימייל:</label>
+    <input type="email" [(ngModel)]="newCustomer.email" placeholder="הכנס אימייל" class="login-input">
+
+    <label>כתובת:</label>
+    <input type="text" [(ngModel)]="newCustomer.address" placeholder="הכנס כתובת" class="login-input">
+
+    <label>קוד עיר:</label>
+    <input type="number" [(ngModel)]="newCustomer.codeCity" placeholder="הכנס קוד עיר" class="login-input">
+
+    <label>קוד אמצעי תשלום:</label>
+    <input type="number" [(ngModel)]="newCustomer.codePayment" placeholder="הכנס קוד אמצעי תשלום" class="login-input">
+
+    <button (click)="onRegister()" class="login-btn" style="margin-top: 10px; background-color: #28a745;">הרשם למערכת</button>
+  </div>
+
+  <div *ngIf="message" [ngStyle]="{'color': isSuccess ? 'green' : 'red', 'margin-top': '15px', 'font-weight': 'bold'}">
+    {{ message }}
+  </div>
+
+</div>
